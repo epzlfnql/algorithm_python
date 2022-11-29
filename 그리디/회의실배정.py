@@ -15,3 +15,5 @@ for s, e in meeting:
     if s>=et:
         et=e
         cnt+=1
+        
+print(cnt)
