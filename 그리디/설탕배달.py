@@ -6,9 +6,8 @@ n = int(input()) # 총 배달해야할거
 
 # 5킬로그랭, 3킬로그램 봉지
 
-cnt = 0
 cnt_5 = n//5
-cnt_3 = 0
+
 
 while True:
 
@@ -22,10 +21,6 @@ while True:
         break
     else:
         cnt_5-=1
-
-
-
-
 
 
 if cnt_5==-1:
