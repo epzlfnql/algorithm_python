@@ -17,16 +17,19 @@ tmp_list = after_k # 계속 갱신해줄거다.
 
 for i in range(k):
 
+    res = [0] * n  # 너무 화나는데 이렇게 안에 안넣어주면 tmp_list가 이상하게 갱신된다..
 
-    res = [0]*n # 너무 화나는데 이렇게 안에 안넣어주면 tmp_list가 이상하게 갱신된다..
+
     for num, j in enumerate(d):
 
         res[j-1] = tmp_list[num]
-        # print(tmp_list[num])
+    #     print(tmp_list[num])
+    # print()
 
 
+    # print(res)
     tmp_list = res
-    #print()
+    # print()
 
 
 for i in res:
