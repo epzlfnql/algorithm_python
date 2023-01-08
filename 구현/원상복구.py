@@ -19,7 +19,6 @@ for i in range(k):
 
     res = [0] * n  # 너무 화나는데 이렇게 안에 안넣어주면 tmp_list가 이상하게 갱신된다..
 
-
     for num, j in enumerate(d):
 
         res[j-1] = tmp_list[num]
