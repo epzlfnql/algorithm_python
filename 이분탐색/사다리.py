@@ -7,11 +7,11 @@ input = sys.stdin.readline
 '''
 x,y,c = map(float, input().split())
 
-r = min(x,y) # 대각선의 길이보다는 빌딩 사이의 너비가 무조건 작다.
-l =1
+start = 1
+end = min(x,y) # 대각선의 길이보다는 빌딩 사이의 너비가 무조건 작다.
 result = 0
-while l+0.001<= r:
-    tmp_len = (l+r)/2
+while start<= end:
+    tmp_len = (start+end)/2
 
     # w를 이용해서 c 계산
     h1 = math.sqrt(x**2-tmp_len**2)
@@ -43,9 +43,9 @@ while l+0.001<= r:
     tmp_c = (h1*h2)/(h1+h2)
     if tmp_c>=c:
         result = tmp_len
-        l = tmp_len # 폭이 더 커야 한다.
+        start = tmp_len+0.001 # 폭이 더 커야 한다.
     else:
-        r = tmp_len
+        end = tmp_len-0.001
 
 print(result)
 
