@@ -16,28 +16,27 @@ for _ in range(m):
 
 
 
-def bfs(v, cnt):
+def bfs(v):
 
     que = deque()
-    que.append([v])
+    que.append(v)
     visited[v]=1
 
     while que:
-        v = que.popleft()
-        cnt += 1
+        t = que.popleft()
 
-        for k in graph[v]:
-            print(k)
+        for k in graph[t]:
             if visited[k] == 0:  # 아직 방문안했으면
                 visited[k] = 1  # 방문 표시해주고
                 que.append(k)
-    return cnt
 
 
-cnt = 0
 
 
-cnt = bfs(1, cnt)
-print(cnt)
+
+
+bfs(1)
+# 방문 안한것만 빼주면 된다 -> 근데 1은 자기자신이므로 1도 빼고
+print(sum(visited)-1)
 
 
