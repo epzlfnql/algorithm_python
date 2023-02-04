@@ -26,15 +26,19 @@ for _ in range(t):
             mid = (start+end)//2
 
             if tmp_a > b[mid]: # 조건을 만족하면
+                # res = mid
                 res_list.append(mid+1)
                 start = mid+1
             else: # 조건을 만족못하면
                 end = mid-1
+
+
 
         # res_list에서 가장 큰값 하나만 넣어주면된다.
         if len(res_list)==0: # 한개도 없으면 그냥 continue
             continue
         else:
             cnt+= max(res_list)
+
 
     print(cnt)

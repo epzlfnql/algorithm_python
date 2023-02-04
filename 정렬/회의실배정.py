@@ -17,7 +17,7 @@ for _ in range(n):
 time_list.sort()# 끝나는 시간이 똑같을 경우 앞에 있는것이 빠른것을 먼저 고려
 time_list.sort(key=lambda x: x[1]) # 끝나는 시간을 기준으로 정렬
 
-# print(time_list)
+print(time_list)
 
 # 맨처음에 있는건 무조건 들어간다. -> 끝나는 시간이 가장 빠르므로
 start = time_list[0]
