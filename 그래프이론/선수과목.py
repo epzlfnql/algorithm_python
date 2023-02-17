@@ -1,6 +1,5 @@
 '''어떤 과목들은 선수과목이 있다.
 선수과목 조건을 지킬 경우 각각의 전공과목을 언제 이수할 수 있는지
-
 '''
 
 import sys
@@ -39,7 +38,7 @@ def topology_sort():
         # 해당 원소와 연결된 노드들의 진입차수에서 1 빼기
         for i in graph[now]:
             indegree[i] -=1
-            outdegree[i]+=1
+            outdegree[i] = outdegree[now]+1 # 그 전에꺼에서 +1만 해주면 된다. 약간 dp 느낌?
             # 새롭게 진입차수가 0이 되는 노드를 큐에 삽입
             if indegree[i] == 0:
                 q.append(i)
